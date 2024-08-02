@@ -35,7 +35,7 @@ let steps = [
     body: () => (
       <p>
         Edit the <code>tailwind.config</code> object to{' '}
-        <NextLink href="/docs/configuration">customize your configuration</NextLink> with your own
+        <NextLink href="/tailwind/docs/configuration">customize your configuration</NextLink> with your own
         design tokens.
       </p>
     ),

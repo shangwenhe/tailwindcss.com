@@ -140,19 +140,19 @@ export default function UsingCRA({ code }) {
             </p>
             <p className="mt-3">
               We <strong className="dark:text-slate-200">highly recommend</strong> using{' '}
-              <Link href="/docs/guides/vite" className="underline font-bold dark:text-slate-200">
+              <Link href="/tailwind/docs/guides/vite" className="underline font-bold dark:text-slate-200">
                 Vite
               </Link>
               ,{' '}
-              <Link href="/docs/guides/parcel" className="underline font-bold dark:text-slate-200">
+              <Link href="/tailwind/docs/guides/parcel" className="underline font-bold dark:text-slate-200">
                 Parcel
               </Link>
               ,{' '}
-              <Link href="/docs/guides/nextjs" className="underline font-bold dark:text-slate-200">
+              <Link href="/tailwind/docs/guides/nextjs" className="underline font-bold dark:text-slate-200">
                 Next.js
               </Link>
               , or{' '}
-              <Link href="/docs/guides/remix" className="underline font-bold dark:text-slate-200">
+              <Link href="/tailwind/docs/guides/remix" className="underline font-bold dark:text-slate-200">
                 Remix
               </Link>{' '}
               instead of Create React App. They provide an equivalent or better developer experience

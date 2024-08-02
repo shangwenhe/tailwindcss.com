@@ -1,15 +1,16 @@
 import { createPageList } from '@/utils/createPageList'
 
+const basePath = process.env.NODE_ENV === 'production' ? 'tailwind/docs' : 'docs';
 const pages = createPageList(
   require.context(`../pages/docs/?meta=title,shortTitle,published`, false, /\.mdx$/),
-  'docs'
+  basePath
 )
 
 export const documentationNav = {
   'Getting Started': [
     {
       title: 'Installation',
-      href: '/docs/installation',
+      href: `/${basePath}/installation`,
       match: /^\/docs\/(installation|guides)/,
     },
     // TODO: Add these pages

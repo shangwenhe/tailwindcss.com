@@ -122,7 +122,7 @@ export function DarkMode() {
           <InlineCode>dark:</InlineCode> in front of any color utility to apply it when dark mode is
           active. Works for background colors, text colors, border colors, and even gradients.
         </Paragraph>
-        <Link href="/docs/dark-mode" color="gray">
+        <Link href="/tailwind/docs/dark-mode" color="gray">
           Learn more<span className="sr-only">, dark mode</span>
         </Link>
       </div>

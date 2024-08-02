@@ -284,7 +284,7 @@ export function MobileFirst() {
             at a specific breakpoint.
           </p>
         </Paragraph>
-        <Link href="/docs/responsive-design" color="indigo" darkColor="gray">
+        <Link href="/tailwind/docs/responsive-design" color="indigo" darkColor="gray">
           Learn more<span className="sr-only">, responsive design</span>
         </Link>
       </div>

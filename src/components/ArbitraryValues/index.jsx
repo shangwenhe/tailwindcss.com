@@ -39,7 +39,7 @@ export function ArbitraryValues({
       )}
       <p>
         Learn more about arbitrary value support in the{' '}
-        <a href="/docs/adding-custom-styles#using-arbitrary-values">arbitrary values</a>{' '}
+        <a href="/tailwind/docs/adding-custom-styles#using-arbitrary-values">arbitrary values</a>{' '}
         documentation.
       </p>
     </>

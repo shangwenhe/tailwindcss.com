@@ -119,7 +119,7 @@ export function NavItems() {
   return (
     <>
       <li>
-        <Link href="/docs/installation" className="hover:text-sky-500 dark:hover:text-sky-400">
+        <Link href="/tailwind/docs/installation" className="hover:text-sky-500 dark:hover:text-sky-400">
           文档
         </Link>
       </li>

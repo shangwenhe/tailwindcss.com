@@ -109,7 +109,7 @@ export function Customization() {
             transform it into your own custom CSS framework.
           </p>
         </Paragraph>
-        <Link href="/docs/configuration" color="pink" darkColor="gray">
+        <Link href="/tailwind/docs/configuration" color="pink" darkColor="gray">
           Learn more<span className="sr-only">, configuration</span>
         </Link>
         <div className="mt-10">

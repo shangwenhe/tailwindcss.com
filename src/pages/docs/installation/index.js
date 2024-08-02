@@ -108,7 +108,7 @@ export default function TailwindCli({ code }) {
       {/*
         <Cta
           label="Read the documentation"
-          href="/docs/tailwind-cli"
+          href="/tailwind/docs/tailwind-cli"
           description={
             <>
               <strong className="font-semibold text-slate-900">

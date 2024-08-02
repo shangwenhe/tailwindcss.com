@@ -325,7 +325,7 @@ export function EditorTools() {
             within your editor and with no configuration required.
           </p>
         </Paragraph>
-        <Link href="/docs/intellisense" color="sky" darkColor="gray">
+        <Link href="/tailwind/docs/intellisense" color="sky" darkColor="gray">
           Learn more<span className="sr-only">, editor setup</span>
         </Link>
       </div>

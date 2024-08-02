@@ -104,7 +104,7 @@ export function StateVariants() {
           <InlineCode>focus-within</InlineCode>, <InlineCode>focus-visible</InlineCode>, and even
           fancy states we invented ourselves like <InlineCode>group-hover</InlineCode>.
         </Paragraph>
-        <Link href="/docs/hover-focus-and-other-states" color="blue" darkColor="gray">
+        <Link href="/tailwind/docs/hover-focus-and-other-states" color="blue" darkColor="gray">
           Learn more<span className="sr-only">, handling hover, focus, and other states</span>
         </Link>
       </div>

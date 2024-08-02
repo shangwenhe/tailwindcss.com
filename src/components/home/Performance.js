@@ -138,7 +138,7 @@ export function Performance() {
           your final CSS bundle is the smallest it could possibly be. In fact, most Tailwind
           projects ship less than 10kB of CSS to the client.
         </Paragraph>
-        <Link href="/docs/optimizing-for-production" color="sky" darkColor="gray">
+        <Link href="/tailwind/docs/optimizing-for-production" color="sky" darkColor="gray">
           Learn more<span className="sr-only">, optimizing for production</span>
         </Link>
       </div>

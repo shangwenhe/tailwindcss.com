@@ -295,7 +295,7 @@ export function ConstraintBased() {
           spacing, typography, shadows, and everything else that makes up a well-engineered design
           system.
         </Paragraph>
-        <Link href="/docs/utility-first" color="indigo" darkColor="gray">
+        <Link href="/tailwind/docs/utility-first" color="indigo" darkColor="gray">
           Learn more<span className="sr-only">, utility-first fundamentals</span>
         </Link>
         <div className="mt-10">

@@ -256,7 +256,7 @@ export function BuildAnything() {
           Even with the same color palette and sizing scale, it's easy to build the same component
           with a completely different look in the next project.
         </Paragraph>
-        <Link href="/docs/installation" color="pink" darkColor="gray">
+        <Link href="/tailwind/docs/installation" color="pink" darkColor="gray">
           Get started<span className="sr-only">, installation</span>
         </Link>
         <div className="mt-10">

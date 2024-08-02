@@ -35,7 +35,7 @@ export function HoverFocusAndOtherStates({
       )}
       <p>
         For a complete list of all available state modifiers, check out the{' '}
-        <a href="/docs/hover-focus-and-other-states">Hover, Focus, & Other States</a> documentation.
+        <a href="/tailwind/docs/hover-focus-and-other-states">Hover, Focus, & Other States</a> documentation.
       </p>
     </>
   )

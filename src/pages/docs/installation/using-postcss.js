@@ -130,7 +130,7 @@ export default function UsingPostCss({ code }) {
       <Steps level={4} steps={steps} code={code} />
       <Cta
         label="Explore our framework guides"
-        href="/docs/installation/framework-guides"
+        href="/tailwind/docs/installation/framework-guides"
         description={
           <>
             <strong className="font-semibold text-slate-900 dark:text-slate-200">

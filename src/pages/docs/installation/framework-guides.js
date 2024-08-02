@@ -213,8 +213,8 @@ export default function FrameworkGuides() {
       <div className="mt-16 prose prose-slate max-w-3xl dark:prose-dark">
         <p>
           Don't see your framework of choice? Try using{' '}
-          <Link href="/docs/installation">Tailwind CLI</Link> or installing Tailwind{' '}
-          <Link href="/docs/installation/using-postcss">as a PostCSS plugin</Link> instead.
+          <Link href="/tailwind/docs/installation">Tailwind CLI</Link> or installing Tailwind{' '}
+          <Link href="/tailwind/docs/installation/using-postcss">as a PostCSS plugin</Link> instead.
         </p>
       </div>
     </InstallationLayout>

@@ -28,9 +28,9 @@ export function BreakpointsAndMediaQueries({
       )}
       <p>
         To learn more, check out the documentation on{' '}
-        <a href="/docs/responsive-design">Responsive Design</a>,{' '}
-        <a href="/docs/dark-mode">Dark Mode</a> and{' '}
-        <a href="/docs/hover-focus-and-other-states#media-and-feature-queries">
+        <a href="/tailwind/docs/responsive-design">Responsive Design</a>,{' '}
+        <a href="/tailwind/docs/dark-mode">Dark Mode</a> and{' '}
+        <a href="/tailwind/docs/hover-focus-and-other-states#media-and-feature-queries">
           other media query modifiers
         </a>
         .

@@ -6,9 +6,9 @@ export function CustomizePluginColors({ name, configKey, children, learnMore = t
     <>
       <p>
         By default, Tailwind makes the entire{' '}
-        <a href="/docs/customizing-colors#default-color-palette">default color palette</a> available
+        <a href="/tailwind/docs/customizing-colors#default-color-palette">default color palette</a> available
         as {name} colors. You can{' '}
-        <a href="/docs/colors#customizing">customize your color palette</a> by editing{' '}
+        <a href="/tailwind/docs/colors#customizing">customize your color palette</a> by editing{' '}
         <code>theme.colors</code> or <code>theme.extend.colors</code> in your{' '}
         <code>tailwind.config.js</code> file.
       </p>
@@ -30,7 +30,7 @@ export function CustomizePluginColors({ name, configKey, children, learnMore = t
       {learnMore && (
         <p>
           Learn more about customizing the default theme in the{' '}
-          <a href="/docs/theme#customizing-the-default-theme">theme customization</a> documentation.
+          <a href="/tailwind/docs/theme#customizing-the-default-theme">theme customization</a> documentation.
         </p>
       )}
     </>

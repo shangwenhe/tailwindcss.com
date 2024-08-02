@@ -336,7 +336,7 @@ function AtApplySection() {
           Use Tailwind's <InlineCode>@apply</InlineCode> directive to extract repeated utility
           patterns into custom CSS classes just by copying and pasting the list of class names.
         </Paragraph>
-        <Link href="/docs/reusing-styles" color="sky" darkColor="gray">
+        <Link href="/tailwind/docs/reusing-styles" color="sky" darkColor="gray">
           Learn more<span className="sr-only">, reusing styles</span>
         </Link>
       </div>
@@ -566,7 +566,7 @@ export function ComponentDriven() {
           extract them into a component or template partial and boom — you've got a single source of
           truth so you can make changes in one place.
         </Paragraph>
-        <Link href="/docs/reusing-styles" color="sky" darkColor="gray">
+        <Link href="/tailwind/docs/reusing-styles" color="sky" darkColor="gray">
           Learn more<span className="sr-only">, reusing styles</span>
         </Link>
         <div className="mt-10">

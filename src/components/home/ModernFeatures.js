@@ -133,7 +133,7 @@ export function ModernFeatures() {
             <InlineCode>:focus-visible</InlineCode>, and tons more.
           </p>
         </Paragraph>
-        <Link href="/docs/grid-template-columns" color="indigo" darkColor="gray">
+        <Link href="/tailwind/docs/grid-template-columns" color="indigo" darkColor="gray">
           Learn more<span className="sr-only">, grid template columns</span>
         </Link>
         <div className="mt-10">

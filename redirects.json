@@ -1,86 +1,86 @@
 [
-  { "source": "/docs/what-is-tailwind", "destination": "/", "permanent": false },
-  { "source": "/docs/flexbox-display", "destination": "/docs/display", "permanent": false },
-  { "source": "/docs/spacing", "destination": "/docs/padding", "permanent": false },
-  { "source": "/docs/shadows", "destination": "/docs/box-shadow", "permanent": false },
+  { "source": "/docs/what-is-tailwind", "destination": "/tailwind/", "permanent": false },
+  { "source": "/docs/flexbox-display", "destination": "/tailwind/docs/display", "permanent": false },
+  { "source": "/docs/spacing", "destination": "/tailwind/docs/padding", "permanent": false },
+  { "source": "/docs/shadows", "destination": "/tailwind/docs/box-shadow", "permanent": false },
   {
     "source": "/docs/whitespace-and-wrapping",
-    "destination": "/docs/whitespace",
+    "destination": "/tailwind/docs/whitespace",
     "permanent": false
   },
-  { "source": "/docs/floats", "destination": "/docs/float", "permanent": false },
-  { "source": "/docs/positioning", "destination": "/docs/position", "permanent": false },
-  { "source": "/docs/fonts", "destination": "/docs/font-family", "permanent": false },
-  { "source": "/docs/text-sizing", "destination": "/docs/font-size", "permanent": false },
-  { "source": "/docs/text-style", "destination": "/docs/font-style", "permanent": false },
-  { "source": "/docs/text-alignment", "destination": "/docs/text-align", "permanent": false },
+  { "source": "/docs/floats", "destination": "/tailwind/docs/float", "permanent": false },
+  { "source": "/docs/positioning", "destination": "/tailwind/docs/position", "permanent": false },
+  { "source": "/docs/fonts", "destination": "/tailwind/docs/font-family", "permanent": false },
+  { "source": "/docs/text-sizing", "destination": "/tailwind/docs/font-size", "permanent": false },
+  { "source": "/docs/text-style", "destination": "/tailwind/docs/font-style", "permanent": false },
+  { "source": "/docs/text-alignment", "destination": "/tailwind/docs/text-align", "permanent": false },
   {
     "source": "/docs/vertical-alignment",
-    "destination": "/docs/vertical-align",
+    "destination": "/tailwind/docs/vertical-align",
     "permanent": false
   },
   {
     "source": "/docs/flexbox-direction",
-    "destination": "/docs/flex-direction",
+    "destination": "/tailwind/docs/flex-direction",
     "permanent": false
   },
-  { "source": "/docs/flexbox-wrapping", "destination": "/docs/flex-wrap", "permanent": false },
+  { "source": "/docs/flexbox-wrapping", "destination": "/tailwind/docs/flex-wrap", "permanent": false },
   {
     "source": "/docs/flexbox-align-items",
-    "destination": "/docs/align-items",
+    "destination": "/tailwind/docs/align-items",
     "permanent": false
   },
   {
     "source": "/docs/flexbox-align-content",
-    "destination": "/docs/align-content",
+    "destination": "/tailwind/docs/align-content",
     "permanent": false
   },
-  { "source": "/docs/flexbox-align-self", "destination": "/docs/align-self", "permanent": false },
+  { "source": "/docs/flexbox-align-self", "destination": "/tailwind/docs/align-self", "permanent": false },
   {
     "source": "/docs/flexbox-justify-content",
-    "destination": "/docs/justify-content",
+    "destination": "/tailwind/docs/justify-content",
     "permanent": false
   },
-  { "source": "/docs/flexbox-flex", "destination": "/docs/flex", "permanent": false },
-  { "source": "/docs/flexbox-flex-grow", "destination": "/docs/flex-grow", "permanent": false },
+  { "source": "/docs/flexbox-flex", "destination": "/tailwind/docs/flex", "permanent": false },
+  { "source": "/docs/flexbox-flex-grow", "destination": "/tailwind/docs/flex-grow", "permanent": false },
   {
     "source": "/docs/flexbox-flex-shrink",
-    "destination": "/docs/flex-shrink",
+    "destination": "/tailwind/docs/flex-shrink",
     "permanent": false
   },
-  { "source": "/docs/svg", "destination": "/docs/fill", "permanent": false },
+  { "source": "/docs/svg", "destination": "/tailwind/docs/fill", "permanent": false },
   {
     "source": "/docs/using-with-sass-less-stylus",
-    "destination": "/docs/using-with-preprocessors",
+    "destination": "/tailwind/docs/using-with-preprocessors",
     "permanent": false
   },
   {
     "source": "/docs/state-variants",
-    "destination": "/docs/pseudo-class-variants",
+    "destination": "/tailwind/docs/pseudo-class-variants",
     "permanent": false
   },
-  { "source": "/docs/colors", "destination": "/docs/customizing-colors", "permanent": false },
-  { "source": "/screencasts", "destination": "/course", "permanent": false },
+  { "source": "/docs/colors", "destination": "/tailwind/docs/customizing-colors", "permanent": false },
+  { "source": "/screencasts", "destination": "/tailwind/course", "permanent": false },
   { "source": "/discord", "destination": "https://discord.gg/7NF8GNe", "permanent": false },
   {
     "source": "/forum",
     "destination": "https://github.com/tailwindcss/tailwindcss/discussions",
     "permanent": false
   },
-  { "source": "/docs/examples/:slug", "destination": "/components/:slug", "permanent": false },
+  { "source": "/docs/examples/:slug", "destination": "/tailwind/components/:slug", "permanent": false },
   {
     "source": "/components/grids",
-    "destination": "/components/flexbox-grids",
+    "destination": "/tailwind/components/flexbox-grids",
     "permanent": false
   },
   {
     "source": "/docs/controlling-file-size",
-    "destination": "/docs/optimizing-for-production",
+    "destination": "/tailwind/docs/optimizing-for-production",
     "permanent": false
   },
   {
     "source": "/docs/pseudo-class-variants",
-    "destination": "/docs/hover-focus-and-other-states",
+    "destination": "/tailwind/docs/hover-focus-and-other-states",
     "permanent": false
   },
   {
@@ -213,78 +213,78 @@
     "destination": "https://v1.tailwindcss.com/docs/upcoming-changes",
     "permanent": false
   },
-  { "source": "/docs/intellisense", "destination": "/docs/editor-setup", "permanent": false },
+  { "source": "/docs/intellisense", "destination": "/tailwind/docs/editor-setup", "permanent": false },
   {
     "source": "/docs/extracting-components",
-    "destination": "/docs/reusing-styles",
+    "destination": "/tailwind/docs/reusing-styles",
     "permanent": false
   },
-  { "source": "/docs/editor-support", "destination": "/docs/editor-setup", "permanent": false },
-  { "source": "/docs/breakpoints", "destination": "/docs/screens", "permanent": false },
-  { "source": "/docs", "destination": "/docs/installation", "permanent": false },
+  { "source": "/docs/editor-support", "destination": "/tailwind/docs/editor-setup", "permanent": false },
+  { "source": "/docs/breakpoints", "destination": "/tailwind/docs/screens", "permanent": false },
+  { "source": "/docs", "destination": "/tailwind/docs/installation", "permanent": false },
   {
     "source": "/docs/placeholder-color",
-    "destination": "/docs/hover-focus-and-other-states#placeholder-text",
+    "destination": "/tailwind/docs/hover-focus-and-other-states#placeholder-text",
     "permanent": false
   },
   {
     "source": "/docs/placeholder-opacity",
-    "destination": "/docs/hover-focus-and-other-states#placeholder-text",
+    "destination": "/tailwind/docs/hover-focus-and-other-states#placeholder-text",
     "permanent": false
   },
   {
     "source": "/docs/text-opacity",
-    "destination": "/docs/text-color#changing-the-opacity",
+    "destination": "/tailwind/docs/text-color#changing-the-opacity",
     "permanent": false
   },
   {
     "source": "/docs/background-opacity",
-    "destination": "/docs/background-color#changing-the-opacity",
+    "destination": "/tailwind/docs/background-color#changing-the-opacity",
     "permanent": false
   },
   {
     "source": "/docs/border-opacity",
-    "destination": "/docs/border-color#changing-the-opacity",
+    "destination": "/tailwind/docs/border-color#changing-the-opacity",
     "permanent": false
   },
   {
     "source": "/docs/divide-opacity",
-    "destination": "/docs/divide-color#changing-the-opacity",
+    "destination": "/tailwind/docs/divide-color#changing-the-opacity",
     "permanent": false
   },
   {
     "source": "/docs/ring-opacity",
-    "destination": "/docs/ring-color#changing-the-opacity",
+    "destination": "/tailwind/docs/ring-color#changing-the-opacity",
     "permanent": false
   },
   {
     "source": "/docs/outline",
-    "destination": "/docs/outline-width",
+    "destination": "/tailwind/docs/outline-width",
     "permanent": false
   },
   {
     "source": "/docs/filter",
-    "destination": "/docs/blur",
+    "destination": "/tailwind/docs/blur",
     "permanent": false
   },
   {
     "source": "/docs/backdrop-filter",
-    "destination": "/docs/backdrop-blur",
+    "destination": "/tailwind/docs/backdrop-blur",
     "permanent": false
   },
   {
     "source": "/docs/transform",
-    "destination": "/docs/scale",
+    "destination": "/tailwind/docs/scale",
     "permanent": false
   },
   {
     "source": "/docs/adding-base-styles",
-    "destination": "/docs/adding-custom-styles#adding-base-styles",
+    "destination": "/tailwind/docs/adding-custom-styles#adding-base-styles",
     "permanent": false
   },
   {
     "source": "/docs/adding-new-utilities",
-    "destination": "/docs/adding-custom-styles#adding-custom-utilities",
+    "destination": "/tailwind/docs/adding-custom-styles#adding-custom-utilities",
     "permanent": false
   },
   {
@@ -304,7 +304,7 @@
   },
   {
     "source": "/docs/guides/vue-3-vite",
-    "destination": "/docs/guides/vite#vue",
+    "destination": "/tailwind/docs/guides/vite#vue",
     "permanent": false
   },
   {
