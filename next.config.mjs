@@ -48,14 +48,25 @@ const fallbackGetStaticProps = {}
 export default {
   swcMinify: true,
   pageExtensions: ['js', 'jsx', 'mdx'],
+  output: 'standalone',
+  // assetPrefix: '',
   experimental: {
     esmExternals: false,
     scrollRestoration: true,
+  },
+  outDir: 'output/',
+  distDir: '.next/',
+  images: {
+    unoptimized: true,
   },
   async redirects() {
     return JSON.parse(fs.readFileSync(require.resolve('./redirects.json'), 'utf8'))
   },
   webpack(config, options) {
+    config.output = {
+      ...config.output,
+      publicPath: '/tailwindcss/',
+    }
     config.module.rules.push({
       test: /\.mp4$/i,
       issuer: /\.(jsx?|tsx?|mdx)$/,
