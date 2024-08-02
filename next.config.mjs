@@ -49,12 +49,11 @@ export default {
   swcMinify: true,
   pageExtensions: ['js', 'jsx', 'mdx'],
   output: 'standalone',
-  // assetPrefix: '',
+  assetPrefix: '/tailwind',
   experimental: {
     esmExternals: false,
     scrollRestoration: true,
   },
-  outDir: 'output/',
   distDir: '.next/',
   images: {
     unoptimized: true,
