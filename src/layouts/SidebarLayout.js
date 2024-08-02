@@ -139,7 +139,6 @@ function Nav({ nav, children, fallbackHref, mobile = false }) {
         {!mobile && <div className="h-8 bg-gradient-to-b from-white dark:from-slate-900" />}
       </div>
       <ul>
-        <TopLevelNav mobile={mobile} />
         {children}
         {nav &&
           Object.keys(nav)

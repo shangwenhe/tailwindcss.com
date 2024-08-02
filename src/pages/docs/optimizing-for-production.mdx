@@ -1,6 +1,6 @@
 ---
-title: Optimizing for Production
-description: Getting the most performance out of Tailwind CSS projects.
+title: 优化生产
+description: 从Tailwind CSS项目中获得最佳性能。
 ---
 
 import { Heading } from '@/components/Heading'
@@ -8,21 +8,21 @@ import { TipGood, TipBad } from '@/components/Tip'
 import { SnippetGroup } from '@/components/SnippetGroup'
 import { Performance } from '@/components/home/Performance'
 
-Tailwind CSS is incredibly performance focused and aims to produce the smallest CSS file possible by only generating the CSS you are _actually using_ in your project.
+Tailwind CSS非常注重性能，旨在通过仅生成您在项目中实际使用的CSS来生成尽可能小的CSS文件。
 
-Combined with minification and network compression, this usually leads to CSS files that are less than 10kB, even for large projects. For example, Netflix uses Tailwind for [Netflix Top 10](https://top10.netflix.com/) and the entire website delivers only 6.5kB of CSS over the network.
+结合缩小和网络压缩，这通常会导致CSS文件小于10kB，即使对于大型项目也是如此。例如，Netflix在[Netflix Top 10](https://top10.netflix.com/)中使用Tailwind整个网站通过网络仅传输6.5kB的CSS。
 
-With CSS files this small, you don't have to worry about complex solutions like code-splitting your CSS for each page, and can instead just ship a single small CSS file that's downloaded once and cached until you redeploy your site.
+有了这么小的CSS文件，你就不必担心复杂的解决方案，比如为每个页面拆分CSS代码，而是可以只发布一个下载一次并缓存的小CSS文件，直到你重新部署你的网站。
 
-For the smallest possible production build, we recommend minifying your CSS with a tool like [cssnano](https://cssnano.github.io/cssnano), and compressing your CSS with [Brotli](https://en.wikipedia.org/wiki/Brotli).
+为了尽可能小的生产构建，我们建议使用[cssnano](https://cssnano.github.io/cssnano)等工具缩小CSS，并使用[Brotli](https://en.wikipedia.org/wiki/Brotli)压缩CSS.
 
-If you're using Tailwind CLI, you can minify your CSS by adding the `--minify` flag:
+如果你使用的是Tailwind CLI，你可以通过添加“--minify”标志来缩小CSS：
 
 ```shell
 npx tailwindcss -o build.css --minify
 ```
 
-If you've installed Tailwind as a PostCSS plugin, add `cssnano` to the end of your plugin list:
+如果您已将Tailwind安装为PostCSS插件，请在插件列表末尾添加“cssnano”：
 
 ```js {{ filename: 'postcss.config.js' }}
 module.exports = {
@@ -34,4 +34,4 @@ module.exports = {
 }
 ```
 
-If you're using a framework, check the documentation as this is often handled for you in production automatically and you don't even need to configure it.
+如果您使用的是框架，请检查文档，因为这通常在生产中自动为您处理，您甚至不需要配置它。

@@ -45,11 +45,12 @@ const fallbackDefaultExports = {
 
 const fallbackGetStaticProps = {}
 
+
 export default {
   swcMinify: true,
   pageExtensions: ['js', 'jsx', 'mdx'],
   output: 'standalone',
-  assetPrefix: '/tailwind',
+  assetPrefix:  process.env.NODE_ENV === 'production' ? '/tailwind' : '',
   experimental: {
     esmExternals: false,
     scrollRestoration: true,
