@@ -1,0 +1,63 @@
+---
+title: "Brand"
+description: "Tailwind CSS brand assets and usage guidelines."
+---
+
+import {DocumentationLayout} from '@/layouts/DocumentationLayout'
+import {ContentsLayout} from '@/layouts/ContentsLayout'
+
+import tailwindcssLogoMark from '@/img/brand/tailwindcss-mark.svg'
+import tailwindcssLogoType from '@/img/brand/tailwindcss-logotype.svg'
+import tailwindcssLogoTypeWhite from '@/img/brand/tailwindcss-logotype-white.svg'
+
+export const Layout = DocumentationLayout
+export default ContentsLayout
+
+## 商标使用协议
+
+Tailwind名称和徽标是TailwindLabs股份有限公司的商标。
+
+您不得以任何可能错误地暗示与Tailwind Labs股份有限公司有任何官方联系或认可的方式使用Tailwind名称或徽标。不允许以可能导致客户混淆的方式使用任何Tailwinds名称或徽标。
+
+这包括以强调顺风品牌的方式命名产品或服务，如“顺风主题”或“顺风工作室”，以及在“tailwindkits.com”等域名中命名。
+
+相反，您必须使用自己的品牌名称，以便将其与Tailwind CSS明确区分开来。允许的示例包括“顺风CSS的ComponentStudio”或“实用主题：顺风CSS的模板”。
+
+此外，未经明确书面同意，您不得将我们的商标用于t恤、贴纸或其他商品。
+
+---
+
+## 资产
+
+这些资源用于文章和视频教程等场合。它们不应以任何可能使客户感到困惑或暗示与Tailwind Labs股份有限公司有任何关联的方式使用。
+
+### Mark
+
+<div className="pt-5 pb-8">
+  <a href={tailwindcssLogoMark} download>
+    <span className="sr-only">Download mark</span>
+    <div className="max-w-xl">
+      <div className="relative" style={{ paddingTop: `${33 / 262 * 100}%` }}>
+        <img className="absolute inset-0 w-full h-full object-contain object-left" src={tailwindcssLogoMark} alt="" width={54} height={33} style={{ margin: 0 }} />
+      </div>
+    </div>
+  </a>
+</div>
+
+<a href={tailwindcssLogoMark} download>Download mark</a>
+
+### Logotype
+
+<div className="pt-5 pb-8">
+  <a href={tailwindcssLogoMark} download>
+    <span className="sr-only">Download logotype</span>
+    <div className="max-w-xl">
+      <div className="relative" style={{ paddingTop: `${33 / 262 * 100}%` }}>
+        <img className="absolute inset-0 w-full h-full block dark:hidden" src={tailwindcssLogoType} alt="" width={262} height={33} style={{ margin: 0 }} />
+        <img className="absolute inset-0 w-full h-full hidden dark:block" src={tailwindcssLogoTypeWhite} alt="" width={262} height={33} style={{ margin: 0 }} />
+      </div>
+    </div>
+  </a>
+</div>
+
+<a href="/brand/tailwindcss-logotype.zip" download>Download logotype</a>

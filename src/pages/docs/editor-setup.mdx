@@ -1,0 +1,51 @@
+---
+title: 编辑器设置
+description: 插件和配置设置，可以改善开发人员在使用Tailwind CSS时的体验。
+---
+
+## 语法支持
+
+Tailwind CSS在`@Tailwind`、`@apply`和`@config`等规则中使用了许多自定义CSS，在许多编辑器中，这可能会在无法识别这些规则的情况下触发警告或错误。
+
+解决方案几乎总是为您的编辑器/IDE安装一个插件，以支持PostCSS语言，而不是常规的CSS。
+
+如果您正在使用VS代码，我们的官方[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)插件包括一个专用的Tailwind CSS语言模式，该语言模式支持Tailwind使用的所有自定义at规则和函数。
+
+在某些情况下，如果编辑器对CSS文件中的语法要求非常严格，则可能需要禁用本机CSS linting/validations。
+
+## IntelliSense for VS Code
+
+官方[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-VisualStudio代码的tailwindcss)扩展通过为用户提供自动完成、语法突出显示和linting等高级功能，增强了Tailwind开发体验。
+
+<img src={require('@/img/intellisense.png').default.src} alt="Tailwind CSS IntelliSense extension for Visual Studio Code" width={1344} height={672} className="rounded-lg" />
+
+- **自动完成**. 类名以及[CSS functions and directives](/docs/functions-and-directives)的智能建议。
+- **Linting**. 突出显示CSS和标记中的错误和潜在错误。
+- **悬停预览**. 通过将鼠标悬停在Tailwind类名上，查看该类名的完整CSS。
+- **语法突出显示**. 提供语法定义，以便正确高亮显示Tailwind功能。
+
+Check out the project [on GitHub](https://github.com/tailwindcss/intellisense) to learn more, or [add it to Visual Studio Code](vscode:extension/bradlc.vscode-tailwindcss) to get started now.
+
+## Automatic class sorting with Prettier
+
+我们维护了一个官方的[Prettier plugin](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)对于Tailwind CSS，它按照我们的[recommended class order](/blog/automatic-class-sorting-with-prettier#how-classes-are-sorted)自动对类进行排序。
+
+<img src={require('@/img/prettier-banner.jpg').default.src} alt="" width={2400} height={819} className="rounded-lg" />
+
+它与定制的Tailwind配置无缝协作，并且因为它只是一个Prettier插件，所以它可以在Prettier-works的任何地方工作——包括每个流行的编辑器和IDE，当然还有命令行。
+
+```html
+<!-- Before -->
+<button class="text-white px-4 sm:px-8 py-2 sm:py-3 bg-sky-700 hover:bg-sky-800">...</button>
+
+<!-- After -->
+<button class="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3">...</button>
+```
+
+Check out the plugin [on GitHub](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) to learn more and get started.
+
+## JetBrains IDEs
+
+JetBrains IDE（如WebStorm、PhpStorm和其他）在HTML中以及在使用“@apply”时支持智能Tailwind CSS补全。
+
+[Learn more about Tailwind CSS support in JetBrains IDEs &rarr;](https://www.jetbrains.com/help/webstorm/tailwind-css.html)
