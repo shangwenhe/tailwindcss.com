@@ -12,7 +12,6 @@
 /.next/
 /out/
 /public/feeds/
-/src/videos/showcase/
 
 # production
 /build
