@@ -1,21 +1,21 @@
 ---
 title: Browser Support
-description: Understanding which browsers Tailwind supports and how to manage vendor prefixes.
+description: 了解Tailwind支持哪些浏览器以及如何管理供应商前缀。
 ---
 
-In general, Tailwind CSS v3.0 is designed for and tested on the latest stable versions of Chrome, Firefox, Edge, and Safari. It does not support any version of IE, including IE 11.
+一般来说，Tailwind CSS v3.0是为Chrome、Firefox、Edge和Safari的最新稳定版本设计和测试的。它不支持任何版本的IE，包括IE 11。
 
-While most of the features in Tailwind CSS will work in all modern browsers, Tailwind also includes APIs for several bleeding-edge features that aren't yet supported by all browsers, for example the `:focus-visible` pseudo-class and `backdrop-filter` utilities.
+虽然Tailwind CSS中的大多数功能都可以在所有现代浏览器中使用，但Tailwind还包括一些尚未被所有浏览器支持的前沿功能的API，例如“：focus visible”伪类和“background filter”实用程序。
 
-Since Tailwind is such a low-level framework, it's easy to avoid these features if you can't use them by simply not using the utility or modifier that's not supported, much like how you just wouldn't use those CSS features in your CSS.
+由于Tailwind是一个低级框架，如果你不能使用这些功能，那么很容易避免这些功能，因为你只是不使用不受支持的实用程序或修饰符，就像你不会在CSS中使用这些CSS功能一样。
 
-The [Can I Use](https://caniuse.com/?search=focus-visible) database is a great resource when you're unsure about the support for an unfamiliar CSS feature.
+当您不确定是否支持不熟悉的CSS功能时， [Can I Use](https://caniuse.com/?search=focus-visible)是一个很好的资源。
 
 ---
 
-## Vendor Prefixes
+## 供应商前缀
 
-Many CSS properties require vendor prefixes to be understood by browsers, for example `background-clip: text` needs the `-webkit` prefix to work in most browsers:
+许多CSS属性要求浏览器理解供应商前缀，例如“background clip:text”需要“-webkit”前缀才能在大多数浏览器中工作：
 
 ```css
 .bg-clip-text {
@@ -24,17 +24,17 @@ Many CSS properties require vendor prefixes to be understood by browsers, for ex
 }
 ```
 
-If you're using the Tailwind CLI tool, vendor prefixes like this will be added automatically.
+如果您使用的是Tailwind CLI工具，则会自动添加这样的供应商前缀。
 
-If not, we recommend that you use [Autoprefixer](https://github.com/postcss/autoprefixer), which is a PostCSS plugin that automatically adds any necessary vendor prefixes based on the browsers you tell it you need to support.
+如果不是，我们建议您使用[Autoprefixer](https://github.com/postcss/autoprefixer), 这是一个PostCSS插件，可以根据您告诉它需要支持的浏览器自动添加任何必要的供应商前缀。
 
-To use it, install it via npm:
+要使用它，请通过npm安装：
 
 ```shell
 npm install -D autoprefixer
 ```
 
-Then add it to the very end of your plugin list in your PostCSS configuration:
+然后将其添加到PostCSS配置中插件列表的末尾：
 
 ```js
 module.exports = {
@@ -45,4 +45,4 @@ module.exports = {
 }
 ```
 
-To learn more about specifying which browsers you need to support, check out [Browserslist](https://github.com/browserslist/browserslist) which is the standard way to define target browsers in front-end tooling.
+要了解有关指定需要支持哪些浏览器的更多信息，请查看[Browserslist](https://github.com/browserslist/browserslist) which is the standard way to define target browsers in front-end tooling.

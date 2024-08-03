@@ -1,11 +1,11 @@
 ---
 title: "Upgrade Guide"
-description: "Upgrading your Tailwind CSS projects from v2 to v3."
+description: "将Tailwind CSS项目从v2升级到v3。"
 ---
 
-Tailwind CSS v3.0 is a major update to the framework with a brand new internal engine and as such includes a small number of breaking changes.
+Tailwind CSS v3.0是对框架的一次重大更新，它使用了一个全新的内部引擎，因此包含了一些突破性的更改。
 
-We take stability very seriously and have worked hard to make any breaking changes as painless as possible. For most projects, upgrading to Tailwind CSS v3.0 should take less than 30 minutes.
+我们非常重视稳定，并努力使任何突破性的变化尽可能无痛。对于大多数项目，升级到Tailwind CSS v3.0应该不到30分钟。
 
 <div className="aspect-w-16 aspect-h-9 my-12 rounded-lg overflow-hidden">
   <iframe
@@ -16,27 +16,27 @@ We take stability very seriously and have worked hard to make any breaking chang
   ></iframe>
 </div>
 
-To learn more about what's new in Tailwind CSS v3.0, read the [Tailwind CSS v3.0 announcement](/blog/tailwindcss-v3) on our blog.
+要了解更多关于Tailwind CSS v3.0的新功能，请阅读我们博客上的[Tailwind CSS v3.0公告]（/blog/tailwindcss-v3）。
 
 ---
 
-## Upgrade packages
+## 升级程序包
 
-Update Tailwind, as well as PostCSS and autoprefixer, using npm:
+使用npm更新Tailwind、PostCSS和autoprefixer：
 
 ```shell
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 ```
 
-Note that Tailwind CSS v3.0 requires PostCSS 8, and no longer supports PostCSS 7. If you can't upgrade to PostCSS 8, we recommend using [Tailwind CLI](/docs/installation) instead of installing Tailwind as a PostCSS plugin.
+请注意，Tailwind CSS v3.0需要PostCSS 8，不再支持PostCSS 7。如果您无法升级到PostCSS 8，我们建议您使用[Tailwind CLI]（/docs/installation），而不是将Tailwind作为PostCSS插件安装。
 
-If you are using nesting in your custom CSS (in combination with a PostCSS nesting plugin), you should also [configure the `tailwindcss/nesting` plugin](/docs/using-with-preprocessors#nesting) in your PostCSS configuration to ensure compatibility with Tailwind CSS v3.0.
+如果你在自定义CSS中使用嵌套（与PostCSS嵌套插件结合使用），你还应该在PostCSS配置中[配置`Tailwind CSS/nesting`插件]（/docs/using with preprocessors#nesting），以确保与Tailwind CSS v3.0的兼容性。
 
-### Official plugins
+### 官方插件
 
-All of our first-party plugins have been updated for compatibility with v3.0.
+我们所有的第一方插件都已更新，以与v3.0兼容。
 
-If you're using any of our plugins, make sure to update them all to the latest version at the same time to avoid version constraint errors.
+如果您正在使用我们的任何插件，请确保同时将它们全部更新到最新版本，以避免版本约束错误。
 
 ```html
 npm install -D tailwindcss@latest \
@@ -48,11 +48,11 @@ npm install -D tailwindcss@latest \
   autoprefixer@latest
 ```
 
-### Play CDN
+### 播放CDN
 
-For Tailwind CSS v3.0, the CSS-based CDN build we've offered in the past has been replaced by the new [Play CDN](/docs/installation/play-cdn), which gives you the full power of the new engine right in the browser with no build step.
+对于Tailwind CSS v3.0，我们过去提供的基于CSS的CDN构建已被新的[Play CDN]（/docs/installing/blay-CDN）所取代，这使您无需构建步骤即可在浏览器中完全使用新引擎。
 
-To try it out, throw this `<script>` tag in your `<head>`:
+要尝试一下，在你的`<head>`中抛出这个`<script>`标签：
 
 ```diff-html
   <!DOCTYPE html>
@@ -69,17 +69,17 @@ To try it out, throw this `<script>` tag in your `<head>`:
   </html>
 ```
 
-The Play CDN is designed for development purposes only — compiling your own static CSS build is a much better choice in production.
+Play CDN仅用于开发目的——在生产中编译自己的静态CSS构建是一个更好的选择。
 
 ---
 
-## Migrating to the JIT engine
+## 迁移到JIT引擎
 
-The new [Just-in-Time engine](/blog/just-in-time-the-next-generation-of-tailwind-css) we announced in March has replaced the classic engine in Tailwind CSS v3.0.
+我们在3月份宣布的新[Just in Time engine]（/blog/Just in Time，下一代顺风css）已经取代了顺风css v3.0中的经典引擎。
 
-The new engine generates the styles you need for your project on-demand, and might necessitate some small changes to your project depending on how you have Tailwind configured.
+新引擎按需生成项目所需的样式，并且可能需要对项目进行一些小的更改，具体取决于您对Tailwind的配置。
 
-If you were already opting in to `mode: 'jit'` in Tailwind CSS v2.x, you can safely remove that from your configuration in v3.0:
+如果你已经在Tailwind CSS v2.x中选择了`mode:'jit'，你可以在v3.0中安全地将其从配置中删除：
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
@@ -88,9 +88,9 @@ If you were already opting in to `mode: 'jit'` in Tailwind CSS v2.x, you can saf
   }
 ```
 
-### Configure content sources
+### 配置内容源
 
-Since Tailwind no longer uses PurgeCSS under the hood, we've renamed the `purge` option to `content` to better reflect what it's for:
+由于Tailwind不再在幕后使用PurgeCSS，我们将“purge”选项重命名为“content”，以更好地反映其用途：
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
@@ -107,13 +107,13 @@ Since Tailwind no longer uses PurgeCSS under the hood, we've renamed the `purge`
   }
 ```
 
-If you weren't already using the `purge` option in your project, it's crucial that you configure your template paths now or your compiled CSS will be empty.
+如果您尚未在项目中使用“清除”选项，那么现在配置模板路径至关重要，否则编译的CSS将为空。
 
-Since we're not using PurgeCSS under the hood anymore, some of the advanced purge options have changed. See the new [content configuration](/docs/content-configuration) documentation for more information on advanced options.
+由于我们不再在幕后使用PurgeCSS，一些高级清除选项已经发生了变化。有关高级选项的更多信息，请参阅新的[内容配置]（/docs/content configuration）文档。
 
-### Remove dark mode configuration
+### 删除暗模式配置
 
-The dark mode feature is now enabled using the `media` strategy by default, so you can remove this key entirely from your `tailwind.config.js` file, *unless* you're using the `class` strategy.
+默认情况下，暗模式功能现在使用“media”策略启用，因此您可以从“tailwind.config.js”文件中完全删除此键，*除非*您使用的是“class”策略。
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
@@ -122,7 +122,7 @@ The dark mode feature is now enabled using the `media` strategy by default, so y
   }
 ```
 
-You can also safely remove this key if it's currently set to `false`:
+如果当前设置为“false”，您也可以安全地删除此密钥：
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
@@ -131,9 +131,9 @@ You can also safely remove this key if it's currently set to `false`:
   }
 ```
 
-### Remove variant configuration
+### 删除变体配置
 
-In Tailwind CSS v3.0, every variant is automatically available for every utility by default, so you can remove the `variants` section from your `tailwind.config.js` file:
+在Tailwind CSS v3.0中，默认情况下，每个变量都可以自动用于每个实用程序，因此您可以从`Tailwind.config.js`文件中删除`variables`部分：
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
@@ -146,11 +146,11 @@ In Tailwind CSS v3.0, every variant is automatically available for every utility
   }
 ```
 
-### Replace @variants with @layer
+### 更换 @variants with @layer
 
-Since all variants are now enabled by default, you no longer need to explicitly enable these for custom CSS using the `@variants` or `@responsive` directives.
+由于默认情况下所有变体都已启用，因此您不再需要使用以下命令为自定义CSS显式启用这些变体  `@variants` 或者 `@responsive` 指令。
 
-Instead, add any custom CSS to appropriate "layer" using the `@layer` directive:
+相反，将任何自定义CSS添加到适当的 "layer" 使用`@layer` 指令:
 
 ```diff-css
 -  @variants hover, focus {
@@ -161,50 +161,50 @@ Instead, add any custom CSS to appropriate "layer" using the `@layer` directive:
    }
 ```
 
-Any custom CSS added to one of Tailwind's layers will automatically support variants.
+任何添加到Tailwind层中的自定义CSS都将自动支持变体。
 
-See the documentation on [adding custom styles using CSS and @layer](/docs/adding-custom-styles#using-css-and-layer) for more information.
+有关更多信息，请参阅[使用CSS和@layer添加自定义样式]（/docs/addy custom styles#使用CSS和layer）的文档。
 
-### Automatic transforms and filters
+### 自动转换和过滤
 
-In Tailwind CSS v3.0, transform and filter utilities like `scale-50` and `brightness-75` will automatically take effect without needing to add the `transform`, `filter`, or `backdrop-filter` classes:
+在Tailwind CSS v3.0中，转换和过滤实用程序（如`scale50`和`brightness-75`）将自动生效，而无需添加`transform`、`filter`或`background filter`类：
 
 ```diff-html
 - <div class="transform scale-50 filter grayscale backdrop-filter backdrop-blur-sm">
 + <div class="scale-50 grayscale backdrop-blur-sm">
 ```
 
-While there's no harm in leaving them in your HTML, they can safely be removed — with one exception. If you're relying on `transform` to create a new stacking context, you may want to leave it, otherwise you may run into z-order issues. Alternatively, replace it with `relative` or `isolate` to force a new stacking context.
+虽然将它们留在HTML中没有坏处，但可以安全地删除它们——只有一个例外。如果你依赖“transform”来创建新的堆叠上下文，你可能想离开它，否则你可能会遇到z顺序问题。或者，用“相对”或“隔离”替换它，以强制创建新的堆栈上下文。
 
-### New opacity modifier syntax
+### 新的不透明度修改器语法
 
-The new engine introduces [a new syntax](/docs/background-color#changing-the-opacity) for changing the opacity of color utilities that we recommend migrating to from utilities like `bg-opacity-*`:
+新发动机推出[a new syntax](/docs/background-color#changing-the-opacity) 为了更改颜色实用程序的不透明度，我们建议从“bg opacity-*”等实用程序迁移到：
 
 ```diff-html
 - <div class="bg-black bg-opacity-25">
 + <div class="bg-black/25">
 ```
 
-The old approach still works in all cases except when using a `border-opacity-*` utility with the default `border` class — in v3 you'll need to explicitly specify your border color:
+旧方法仍然适用于所有情况，除非使用默认的border类的border opacity-*实用程序——在v3中，您需要显式指定边框颜色：
 
 ```diff-html
 - <div class="border border-opacity-25">
 + <div class="border border-gray-200/25">
 ```
 
-Every other situation behaves the same, so aside from that change your projects will work exactly as they did before. We do recommend using the new syntax going forward though, and plan to disable utilities like `border-opacity-*` and `bg-opacity-*` by default in v4, though you will still be able to enable them if needed.
+其他情况都是一样的，所以除了这个变化之外，你的项目将完全像以前一样工作。不过，我们确实建议继续使用新语法，并计划在v4中默认禁用“border opacity-*”和“bg opacity-”等实用程序，但如果需要，您仍然可以启用它们。
 
-This new syntax works for all color utilities, even utilities that didn't have any way to change the opacity in the past like `from-red-500/75`.
+这种新语法适用于所有颜色实用程序，即使是过去没有任何方法更改不透明度的实用程序，如“from-red-500/75”。
 
 ---
 
-## Color palette changes
+## 调色板更改
 
-Tailwind CSS v3.0 now includes every color from the extended color palette by default, including previously disabled colors like cyan, rose, fuchsia, and lime, and all five variations of gray.
+Tailwind CSS v3.0现在默认包含扩展调色板中的所有颜色，包括之前禁用的颜色，如青色、玫瑰色、紫红色和石灰色，以及所有五种灰色变体。
 
-### Removed color aliases
+### 已删除颜色别名
 
-In v2.0, several of the default colors were actually aliases for the extended colors:
+在v2.0中，几个默认颜色实际上是扩展颜色的别名：
 
 | v2 Default | v2 Extended |
 | --- | --- |
@@ -212,9 +212,9 @@ In v2.0, several of the default colors were actually aliases for the extended co
 | `yellow` | `amber` |
 | `purple` | `violet` |
 
-In v3.0, these colors use their extended names by default, so what was previously `bg-green-500` is now `bg-emerald-500`, and `bg-green-500` now refers to the green from the extended palette.
+在v3.0中，这些颜色默认使用其扩展名称，因此以前的“bg-green-500”现在是“bg-emerald-500”，“bg-grreen-500”指的是扩展调色板中的绿色。
 
-If you're using these colors in your project, the simplest way to upgrade is to alias them back to their previous names in your `tailwind.config.js` file:
+如果你在项目中使用这些颜色，最简单的升级方法是在`tailwind.config.js`文件中将它们重新命名为以前的名称：
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   const colors = require('tailwindcss/colors')
@@ -233,11 +233,11 @@ If you're using these colors in your project, the simplest way to upgrade is to 
   }
 ```
 
-If you are already using a custom color palette, this change doesn't impact you at all.
+如果您已经在使用自定义调色板，则此更改根本不会影响您。
 
-### Renamed gray scales
+### 重命名灰度
 
-As part of enabling all of the extended colors by default, we've given the different gray shades shorter single-word names to make them more practical to use and make it less awkward for them to co-exist at the same time.
+作为默认启用所有扩展颜色的一部分，我们为不同的灰色调提供了较短的单个单词名称，使其更实用，并使它们同时共存时不那么尴尬。
 
 | v2 Default | v2 Extended | v3 Unified |
 | --- | --- | --- |
@@ -247,7 +247,7 @@ As part of enabling all of the extended colors by default, we've given the diffe
 | N/A | `trueGray` | `neutral` |
 | N/A | `warmGray` | `stone` |
 
-If you were referencing any of the extended grays, you should update your references to the new names, for example:
+如果你引用了任何扩展的灰色，你应该更新对新名称的引用，例如：
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   const colors = require('tailwindcss/colors')
@@ -265,47 +265,47 @@ If you were referencing any of the extended grays, you should update your refere
   }
 ```
 
-If you weren't referencing any of the grays from the extended color palette, this change doesn't impact you at all.
+如果您没有引用扩展调色板中的任何灰色，则此更改根本不会影响您。
 
 ---
 
-## Class name changes
+## 类名更改
 
-Some class names in Tailwind CSS v3.0 have changed to avoid naming collisions, improve the developer experience, or make it possible to support new features.
+Tailwind CSS v3.0中的一些类名已经更改，以避免命名冲突，改善开发人员体验，或支持新功能。
 
-Wherever possible we have preserved the old name as well so many of these changes are non-breaking, but you're encouraged to update to the new class names.
+只要有可能，我们也会保留旧名称，因此许多更改都是不间断的，但我们鼓励您更新到新的类名。
 
-### overflow-clip/ellipsis
+### 溢出剪辑/省略号
 
-Those damn browser developers added a real `overflow: clip` property, so using `overflow-clip` for `text-overflow: clip` is a really bad idea now.
+那些该死的浏览器开发人员添加了一个真正的“overflow:clip”属性，因此现在将“overflow-clip”用于“textoverflow:click”是一个非常糟糕的主意。
 
-We've renamed `overflow-clip` to `text-clip`, and renamed `overflow-ellipsis` to `text-ellipsis` to avoid the naming collision:
+为了避免命名冲突，我们将“overflow clip”重命名为“text clip”，并将“overlow省略号”更名为“text省略号”：
 
 ```diff-html
 - <div class="overflow-clip overflow-ellipsis">
 + <div class="text-clip text-ellipsis">
 ```
 
-This is extremely unlikely to affect anyone, as there are very few use-cases for `text-clip` and it's only really included for the sake of completion.
+这极不可能影响任何人，因为“文本剪辑”的用例很少，而且它只是为了完成而被包含在内。
 
-### flex-grow/shrink
+### 柔性增长/收缩
 
-We've added `grow-*` and `shrink-*` as aliases for `flex-grow-*` and `flex-shrink-*`:
+我们添加了`grow-*`和`shrink-*`作为`flex-grow-*'和`flex-shrink-`的别名：
 
 ```diff-html
 - <div class="flex-grow-0 flex-shrink">
 + <div class="grow-0 shrink">
 ```
 
-The old class names will always work but you're encouraged to update to the new ones.
+旧的类名始终有效，但我们鼓励您更新为新的类名。
 
-### outline-black/white
+### outline黑色/白色
 
-Since browsers are finally starting to respect border radius when rendering outlines, we've added separate utilities for the `outline-style`, `outline-color`, `outline-width` and `outline-offset` properties.
+由于浏览器在渲染轮廓时终于开始考虑边框半径，我们为“轮廓样式”、“轮廓颜色”、“大纲宽度”和“轮廓偏移”属性添加了单独的实用程序。
 
-This means that `outline-white` and `outline-black` now only set the outline _color_, whereas in v2 they set the color, width, style, and offset.
+这意味着“白色轮廓”和“黑色轮廓”现在只设置轮廓_color_，而在v2中，它们设置颜色、宽度、样式和偏移。
 
-If you are using `outline-white` or `outline-black` in your project, you can bring back the old styles by adding the following custom CSS to your project:
+如果你在项目中使用“白色轮廓”或“黑色轮廓”，你可以通过在项目中添加以下自定义CSS来恢复旧样式：
 
 ```css
 @layer utilities {
@@ -321,7 +321,7 @@ If you are using `outline-white` or `outline-black` in your project, you can bri
 }
 ```
 
-Alternatively, you can update any usage of them in your CSS with the following classes:
+或者，您可以使用以下类更新CSS中它们的任何用法：
 
 ```diff-html
 - <div class="outline-black">
@@ -331,9 +331,9 @@ Alternatively, you can update any usage of them in your CSS with the following c
 + <div class="outline-white outline-2 outline-dotted outline-offset-2">
 ```
 
-### decoration-clone/slice
+### coronation克隆/切片
 
-We've added `box-decoration-clone` and `box-decoration-slice` as aliases for `decoration-clone` and `decoration-slice` to avoid confusion with all of the new `text-decoration` utilities that use the `decoration-` namespace:
+我们添加了“box decadement clone”和“box decade slice”作为“decadement clone”和“decaderation slice”的别名，以避免与所有使用“decadement-”命名空间的新“text decadement”实用程序混淆：
 
 ```diff-html
 - <div class="decoration-clone"></div>
@@ -343,19 +343,19 @@ We've added `box-decoration-clone` and `box-decoration-slice` as aliases for `de
 + <div class="box-decoration-slice"></div>
 ```
 
-The old class names will always work but you're encouraged to update to the new ones.
+旧的类名始终有效，但我们鼓励您更新为新的类名。
 
 ---
 
-## Other minor changes
+## 其他细微变化
 
-Tailwind CSS v3.0 necessitates a couple of other small breaking changes that are unlikely to affect many people, but have been captured here.
+Tailwind CSS v3.0需要一些其他小的突破性更改，这些更改不太可能影响很多人，但已在此处捕获。
 
-### Separator cannot be a dash
+### 分隔符不能是破折号
 
-The dash (`-`) character cannot be used as a custom separator in v3.0 because of a parsing ambiguity it introduces in the engine.
+破折号（“-”）字符在v3.0中不能用作自定义分隔符，因为它在引擎中引入了解析歧义。
 
-You'll have to switch to another character like `_` instead:
+你必须切换到另一个字符，比如“_”：
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
@@ -365,9 +365,9 @@ You'll have to switch to another character like `_` instead:
   }
 ```
 
-### Prefix cannot be a function
+### 前缀不能是函数
 
-Prior to Tailwind CSS v3.0, it was possible to define your class prefix as a function:
+在Tailwind CSS v3.0之前，可以将类前缀定义为函数：
 
 ```js {{ filename: 'tailwind.config.js' }}
 /** @type {import('tailwindcss').Config} */
@@ -379,9 +379,9 @@ module.exports = {
 }
 ```
 
-This isn't possible in the new engine and we've had to remove support for this feature.
+这在新引擎中是不可能的，我们不得不删除对此功能的支持。
 
-Instead, use a static prefix that is the same for every class Tailwind generates:
+相反，对Tailwind生成的每个类使用相同的静态前缀：
 
 ```js {{ filename: 'tailwind.config.js' }}
 /** @type {import('tailwindcss').Config} */
@@ -391,22 +391,22 @@ module.exports = {
 }
 ```
 
-### File modifier order reversed
+### 文件修改器顺序颠倒
 
-Super minor change since v3.0.0-alpha.2 where the `file` modifier was introduced — if you were combining it with other modifiers like `hover` or `focus`, you'll need to flip the modifier order:
+自v3.0.0-alpha.2引入“file”修饰符以来，发生了非常小的变化——如果你将其与“hover”或“focus”等其他修饰符组合在一起，你需要翻转修饰符的顺序：
 
 ```diff-html
 - <input class="file:hover:bg-blue-600 ...">
 + <input class="hover:file:bg-blue-600 ...">
 ```
 
-Learn more in the [ordering stacked modifiers](/docs/hover-focus-and-other-states#ordering-stacked-modifiers) documentation.
+在[排序堆叠修改器]（/docs/hover focus和其他状态#ordering stack modifier）文档中了解更多信息。
 
-### Fill and stroke use color palette
+### 使用调色板填充和笔划
 
-The `fill-*` and `stroke-*` utilities mirror your `theme.colors` key by default now. This isn't a breaking change if you haven't customized your color palette, but if you have, the `fill-current` and `stroke-current` classes may not work if you don't have `current` included in your own custom color palette.
+现在默认情况下，`fill-*`和`stroke-*`实用程序反映了您的`theme.colors`键。如果你没有自定义你的调色板，这不是一个突破性的变化，但如果你有，如果你没有在自己的自定义调色板中包含“当前”，那么“填充当前”和“笔划当前”类可能无法工作。
 
-Add `current` to your custom color palette to resolve this:
+将“current”添加到自定义调色板中以解决此问题：
 
 ```diff-js {{ filename: 'tailwind.config.js' }}
   module.exports = {
@@ -420,13 +420,13 @@ Add `current` to your custom color palette to resolve this:
   }
 ```
 
-### Negative values removed
+### 负值已删除
 
-The negative prefix in utilities like `-mx-4` is a first class feature in Tailwind now, rather than something driven by your theme, so you can add `-` in front of any utility that support negative values and it will just work.
+像“-mx-4”这样的实用程序中的负前缀现在是Tailwind中的一个一流功能，而不是由您的主题驱动的功能，因此您可以在任何支持负值的实用程序前面添加“-”，它就会正常工作。
 
-The negative values have been removed from the default theme, so if you were referencing them with `theme()`, you will see an error when trying to compile your CSS.
+负值已从默认主题中删除，因此如果您使用“theme（）”引用它们，在尝试编译CSS时将看到错误。
 
-Use the `calc()` function to update any affected code:
+使用`calc（）`函数更新任何受影响的代码：
 
 ```diff-css
   .my-class {
@@ -435,11 +435,11 @@ Use the `calc()` function to update any affected code:
   }
 ```
 
-### Base layer must be present
+### 基层必须存在
 
-In Tailwind CSS v3.0, the `@tailwind base` directive must be present for utilities like transforms, filters, and shadows to work as expected.
+在Tailwind CSS v3.0中，必须存在“@Tailwind base”指令，变换、过滤器和阴影等实用程序才能按预期工作。
 
-If you were previously disabling Tailwind's base styles by not including this directive, you should add it back and disable `preflight` in your `corePlugins` configuration instead:
+如果您之前通过不包含此指令来禁用Tailwind的基本样式，则应将其添加回来，并在“corePlugins”配置中禁用“preflight”：
 
 ```diff-css {{ filename: 'main.css' }}
 +  @tailwind base;
@@ -456,9 +456,9 @@ If you were previously disabling Tailwind's base styles by not including this di
   }
 ```
 
-This will disable Tailwind's global base styles without affecting utilities that rely on adding their own base styles to function correctly.
+这将禁用Tailwind的全局基础样式，而不会影响依赖于添加自己的基础样式才能正常运行的实用程序。
 
-### Screens layer has been renamed
+### 屏幕层已重命名
 
 The `@tailwind screens` layer has been renamed to `@tailwind variants`:
 
@@ -468,4 +468,4 @@ The `@tailwind screens` layer has been renamed to `@tailwind variants`:
 +  @tailwind variants;
 ```
 
-I think you are more likely to be attacked by a shark while working at your desk than you are to be affected by this change.
+我认为你在办公桌前工作时更有可能被鲨鱼袭击，而不是受到这种变化的影响。
